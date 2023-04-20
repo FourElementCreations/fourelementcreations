@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script src="../photo_header.js"></script>
+    <title>Bitmap Presentation</title>
+<style> 
+   #content{
+      padding: 20px;
+   }
+</style>
+</head>
+<body>
+    <script src="../photo_menu.js"></script>
+    <div id="content">
+
+        <h1>Photo-editor Project: Introduction To Bitmap Images</h1>
+        <p>As part of building a photo editor, it is important to understand the thing we will be editing, a bitmap image.</p>
+        <p> In terms of digital images, there are two basic image types: vector and bitmap, aka raster.  While both vector and bitmap
+         can come in different file types, they work in fundamentally different ways.  
+         
+         <p>
+            Vector images are made up of mathematical equations or expressions that describe shapes and lines in the image.
+            These shapes and lines can either be filled with colors or gradients, or given a stroke, 
+            i.e. a visualized line that runs along the path of the mathematically mapped line.
+         </p>
+         <p>
+            Bitmap images, on the other hand, map a 
+            grid of squares called pixels, from "picture + element", and are the smallest element of a bitmap image. 
+            Pixels contain specific color values and correspond to pixels on a display device such as a computer 
+            monitor or smartphone screen.  the size and resolution of the image and the screen can affect how the image appears 
+            and whether it looks sharp and clear or pixelated and blurry.
+         </p>
+         <p>
+            Originally, pixels were only give one bit of data, 
+            they were either on or off, lit or dark.
+            So, this map of pixels was orignally a map of bits, but nowadays they are a map of bytes of data,
+            typically 3 bytes (24-bit) or 4 bytes (32-bit).
+         </p>
+         <p>
+            This data, of course, is accessible, and it is by accessing this data and manipulating it that 
+            digital photo-editing is possible.
+         </p>
+
+
+         <h2>
+            What Data is Contained in a Bitmap Image?
+         </h2>
+         <p>
+            Each pixel in a bitmap image is represented by a set of color values. 
+            These values can be represented in different ways, depending on the file format of the image. 
+            For example, in a 24-bit bitmap image, each pixel is represented by three values: 
+            one for red, one for green, and one for blue (RGB). 
+            These values are often represented as numbers between 0 and 255, 
+            with 0 being the darkest and 255 being the brightest.  The extra byte of data in 32-bit images (RGBA)
+            is for the alpha channel, giving 256 possible values for a pixel's opacity or transparency. 
+         </p>
+         
+
+<p>In addition to the RGB, or RGBA values, bitmap images also contain information about the size of the image, 
+   the resolution (or number of pixels per inch), and other metadata such as the date
+   the image was created and the software used to create it.</p>
+
+
+
+
+
+        <h2>What Can We Do with Bitmap Image Data?</h2> 
+        
+        <p>With the data contained in a bitmap image, we can perform a wide variety of image processing tasks. For example, we can change the color values of individual pixels 
+         to create special effects, or we can blur or sharpen specific areas of the image. 
+         We can also use algorithms to automatically detect and correct problems with the image, 
+         such as noise or distortion.</p>
+         <p>In addition to image processing, bitmap image data can also be used for computer 
+         vision tasks such as object recognition or face detection. By analyzing the color 
+         values and patterns in the pixels, we can train machine learning algorithms to identify 
+         specific objects or features within the image.</p> 
+<p></p>
+<p></p>
+<p></p> 
+<p></p>
+<p></p>
+<p></p> 
+<p></p>
+<p></p>
+<p></p> 
+
+         
+
+
+
+
+         Conclusion
+
+         Bitmap images are an important part of digital imaging, and understanding the data they 
+         contain can help us create powerful image processing and computer vision applications. 
+         In the next article, we'll explore how to load and manipulate bitmap images using JavaScript, 
+         so stay tuned!
+
+         In a bitmap image, each pixel is represented by a set of color values, as I mentioned 
+         in the previous draft. These color values determine the appearance of the pixel in the image. 
+         When we display a bitmap image on a screen, each pixel in the image is 
+         mapped to a corresponding pixel on the screen.
+        
+
+      
+
+        <p>
+         Here we create another variable and assign to it the length of the array we just made. 
+         In JS, 'length' is another keyword and it refers to the number of values in an array. 
+         Hence, because there are two numbers in our array, the length of 'bit' = 2.
+        </p>
+         <p>
+          A byte is 8 bits put together to make a single value. If a bit has 2 possible values,
+         how many possible values then does a byte have? 
+         </p>
+         <p>
+         Using JavaScript, I've defined a variable I've called 'bit' and set it equal to an array
+         containing 2 values, 0 and 1.  Seeing that the next variable 'bitValue' equals 2--the 
+         "length" (number of values) of the 'bit' array, and our variable 'byte' equals 8,
+          then byteValue equals 2^8 or 256 possible values for a byte.
+         </p>
+        
+        <p>
+         Now, I can make an array for byte like I have for bit, but I don't want to 
+         type a bunch of 0s and 1s. So, I created an empty byteArray, then used a "for loop" 
+         so that while the iterator 'i' is less than the value of 'byte' it will push a copy 
+         of the 'bit' array into the byteArray, yielding the result below
+        </p>
+         
+      <p>Bitmap is a type of digital image, also called raster. 
+         It is the image type typically associated with digital photos.
+         There are several bitmap file types including JPEG, PNG, TIF, 
+         and others.</p>  
+   
+      <p>Now pixels in bitmap images are given 3 BYTES of data (or in some cases 4)
+         one byte per color channel in the RGB color system.  In the current
+         system the Red, Green, and Blue channel each have a range of 256 
+         values which totals a range of ${totalColor} colors.`</p>
+
+        <p id="p-2">  `Originally, a bitmap image, basically a grid of squares known as pixels, 
+         was attributed a single bit of data per square.
+         Typically depicted as a 1 or 0, a bit is the smallest piece of data used by a computer. 
+         So it was, one bit per pixel was used in the past for monochrome monitors 
+         in which each pixel bit corresponded to a pixel on the screen which was either on or off, 
+         lit or dark, one color or no color.`,</p>
+      
+ 
+        <p>In the second map, the squares from the first have been reinterpreted using JavaScript to represent 
+           what the image would look like if it were 24px x 12px. It is not part of the tutorial but you can see
+           the JS code <a href="https://github.com/MichaelOsterhus/michaelosterhus.github.io/blob/8b445e9ff7a6e20cb29d31d4fe8071f008d7d7fd/webdev/Bitmap_Presentation/map.js" target="_blank">here</a></p>
+        
+  
+       <pre><code>
+           let bit = [0, 1];
+         </code></pre>
+        <p id="p-6"></p>
+        <pre><code>
+           let bitValue = bit.length;
+        </code></pre>
+        <p id="p-7"></p>
+        <pre><code>
+           let byte = 8;
+           let byteValue = bitValue ** byte;
+        </code></pre>
+        
+        
+        <canvas id="canvas-1"></canvas>
+        <canvas id="canvas-2"></canvas>
+        <canvas id="canvas-3"></canvas>
+        <canvas id="canvas-4"></canvas>
+        <canvas id="canvas-5"></canvas>
+     </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="map.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script src="../photo_header.js"></script>
+    <title>Random Night Sky Generator</title>
+
+</head>
+<body>
+    <script src="../photo_menu.js"></script>
+    <div id="content">
+      <h1>Random Night Sky Generator</h1>
+    <div id="chalkboard">
+        <p id="p-0"></p>
+        <canvas id="btn-0" class="button"></canvas>
+        <canvas id="canvas-0" class="bitmap"></canvas>
+        <p id="p-1">`The night sky image below is a bitmap image made using JavaScript
+         and the HTML canvas element.  The colors of the grid of squares meant to 
+         represent pixels are a mix of randomly generated red, green, and blue
+         values within certain parameters. If you refresh the page/image, you will see
+         a different "night sky".`,
+        
+         `This product of code was made for illustrating how bitmap images work 
+         and during the course of the presentation I will explain the code I used to build 
+         it as a way of explaining bitmap.`,
+        
+         `Originally, a bitmap image, basically a grid of squares known as pixels, 
+         was attributed a single bit of data per square.
+         Typically depicted as a 1 or 0, a bit is the smallest piece of data used by a computer. 
+         So it was, one bit per pixel was used in the past for monochrome monitors 
+         in which each pixel bit corresponded to a pixel on the screen which was either on or off, 
+         lit or dark, one color or no color.`,
+        
+         `Bitmap images account for most but not all images you see
+         on the internet.  Also known as raster images, today they come in many file types such as
+         JPEG, PNG, GIF, and BMP. With bitmap images such as these is not unusual for a single 
+         pixel to be given not a bit, but 3 (to 4) bytes of data with one byte for the red, green, blue, (and alpha) values `,
+        
+         `A bitmap image is not unlike the map below.  This world map is divided up into a grid which is 24 squares wide
+         and 12 squares tall, equaling 288 squares in total. In comparison, this world map 
+         is also a bitmap image, and as such is 600px wide by 300px tall. Meaning, for every visible square in this map, 
+         there are 625 pixels.  `,
+        
+         `For the sake of understanding, we will start with most basic element. `,
+        
+         `With the above line of code we are creating a variable using the keyword 'let'
+         and setting it equal to an array which contains the numbers 0 and 1.  The term 'bit' here
+         is arbitrarily designated but because it names a variable, we can use it elsewhere, such as
+         in the code below:`,
+        
+         `Here we create another variable and assign to it the length of the array we just made. 
+         In JS, 'length' is another keyword and it refers to the number of values in an array. 
+         Hence, because there are two numbers in our array, the length of 'bit' = 2.`,
+        
+         `A byte is 8 bits put together to make a single value. If a bit has 2 possible values,
+         how many possible values then does a byte have? `,
+        
+         `Using JavaScript, I've defined a variable I've called 'bit' and set it equal to an array
+         containing 2 values, 0 and 1.  Seeing that the next variable 'bitValue' equals 2--the 
+         "length" (number of values) of the 'bit' array, and our variable 'byte' equals 8,
+          then byteValue equals 2^8 or 256 possible values for a byte.`,
+        
+         `Now, I can make an array for byte like I have for bit, but I don't want to 
+         type a bunch of 0s and 1s. So, I created an empty byteArray, then used a "for loop" 
+         so that while the iterator 'i' is less than the value of 'byte' it will push a copy 
+         of the 'bit' array into the byteArray, yielding the result below`,
+        
+         `JavaScript can generate a random number between 0 and 1`,
+        
+         `Because I'm using JavaScript to append this text to the page,
+                  this randomly generated number...`,
+         
+         `...will update
+         everytime you refresh the page.`,
+         
+         `Using the 'byteArray' I've just made, I can create a new array I call 'randomByteArray' 
+         in the same manner except I can use JavaScript's "random" method to have the computer
+         randomly choose between the 0 and 1 from each "bit" in 'byteArray' before it is pushed to the new array.
+         Arrays made using the push method are created dynamically and not stored in the source code.  Hence, the 
+         randomly generated "byte" below will be made new everytime the page is refreshed.`,
+        
+         `Bitmap is a type of digital image, also called raster. 
+        It is the image type typically associated with digital photos.
+        There are several bitmap file types including JPEG, PNG, TIF, 
+        and others.`,
+         
+         `Now pixels in bitmap images are given 3 BYTES of data (or in some cases 4)
+           one byte per color channel in the RGB color system.  In the current
+           system the Red, Green, and Blue channel each have a range of 256 
+           values which totals a range of ${totalColor} colors.`</p>
+
+        <canvas id="map1" width="600" height="300"></canvas>
+        <canvas id="map2" width="600" height="300"></canvas>
+        <p>In the second map, the squares from the first have been reinterpreted using JavaScript to represent 
+           what the image would look like if it were 24px x 12px. It is not part of the tutorial but you can see
+           the JS code </p>
+        
+        <h2>Using JavaScript To Create An Image</h2>
+        <p id="p-5"></p>
+        <pre><code>
+           let bit = [0, 1];
+         </code></pre>
+        <p id="p-6"></p>
+        <pre><code>
+           let bitValue = bit.length;
+        </code></pre>
+        <p id="p-7"></p>
+        <pre><code>
+           let byte = 8;
+           let byteValue = bitValue ** byte;
+        </code></pre>
+        
+        <p id="p-8"></p>
+        <p id="p-9"></p>
+        <p id="p-10"></p>
+        <p id="p-11"></p>
+        <p id="p-12"></p>
+        <p id="p-13"></p>
+        <p id="p-14"></p>
+        <p id="p-15"></p>
+        <p id="p-16"></p>
+        <p id="p-17"></p>
+        <p id="p-18"></p>
+        <p id="p-19"></p>
+        
+        <canvas id="canvas-1"></canvas>
+        <canvas id="canvas-2"></canvas>
+        <canvas id="canvas-3"></canvas>
+        <canvas id="canvas-4"></canvas>
+        <canvas id="canvas-5"></canvas>
+     </div>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
