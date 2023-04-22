@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            color: white;
+        }
         /* Set the canvas as a fixed position element that covers the entire viewport */
         #canvas {
         position: fixed;
@@ -20,11 +23,56 @@
         .content {
         margin: 50px; /* Add margin to the content so it's not covered by the canvas */
         }
+        #logo{
+            width: 1000px;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+
+        }
+        #logo_svg{
+            top: 50%;            
+        }
+        #logo_text{
+            position: absolute;
+            top: 22%;
+            left: 24%;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 56px;
+            z-index: 9;
+        }
+        #subtitle{
+            position: absolute;
+            top: 58%;
+            left: 80%;
+            font-family: "typewriter", monospace;
+        }
+        .st3{fill:none;stroke:#C1272D;stroke-width:19;stroke-miterlimit:10;}
+	    .st4{fill:#C1272D;}
+
 
     </style>
 </head>
 <body>
     <canvas id="canvas"></canvas>
+    <div id="logo">
+        <svg id="logo_svg" width="250" height="250">
+            <polygon points="61.87,188.69 165.159,188.96 197.33,90.79 113.919,29.87 30.2,90.37" class="st3"></polygon>
+            <circle class="st4" cx="152.809" cy="104.73" r="10.13"></circle>
+            <circle class="st4" cx="137.669" cy="150.559" r="10.13"></circle>
+            <circle class="st4" cx="74.61" cy="104.73" r="10.13"></circle>
+            <circle class="st4" cx="89.5" cy="150.309" r="10.13"></circle>
+           </svg>
+     <h1 id="logo_text">FOUR ELEMENT CREATIONS</h1>
+     <p id="subtitle">Multimedia Design</p>
+    </div>
+    <div id="test"></div>
+    
+    <!-- <div id="logo"><object id="logo_svg" data="FEC_Alphabet.svg"></object><h1 id="logo_text">FOUR ELEMENT CREATIONS</h1></div> -->
     <script src="app.js"></script>
+    <script src="newSVGpath.js"></script>
 </body>
 </html>

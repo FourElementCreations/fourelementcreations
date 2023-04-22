@@ -29,23 +29,23 @@ var gradient = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius);
 gradient.addColorStop(0, 'rgba(0, 0, 0, 0.4)'); // center is transparent
 gradient.addColorStop(1, 'black'); // edges are black
 
-const logo = new Image()
-logo.src = 'FEC_Alphabet.svg'
-logo.onload = function() {
-    ctx.drawImage(logo, cx - logo.width, 100)
-}
-ctx.textAlign = 'center';
-ctx.textBaseline = 'middle'; 
-// Fill canvas with the gradient
+// const logo = new Image()
+// logo.src = 'FEC_Alphabet.svg'
+// logo.onload = function() {
+//     ctx.drawImage(logo, cx - logo.width, 100)
+// }
+// ctx.textAlign = 'center';
+// ctx.textBaseline = 'middle'; 
+// // Fill canvas with the gradient
 ctx.fillStyle = gradient;
 ctx.fillRect(0, 0, canvas.width, canvas.height);
-  // Set font style
-ctx.font = '60px Arial';
-ctx.fillStyle = 'white';       
+//   // Set font style
+// ctx.font = '60px Arial';
+// ctx.fillStyle = 'white';       
 
   
-  // Draw filled text
-ctx.fillText('FOUR ELEMENT CREATIONS', cx, cy);
+//   // Draw filled text
+// ctx.fillText('FOUR ELEMENT CREATIONS', cx, cy);
 
 }
 img.src = url
