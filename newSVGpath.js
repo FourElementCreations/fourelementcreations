@@ -30,14 +30,7 @@ window.addEventListener("load", (event) => {
     polygon.classList.add('st3')
     svg.appendChild(polygon)
 
-    // const circles = newCirc.map((circ) => {
-    //     const circle = document.createElement('circle');
-    //     const r = 10.13;
-    //     circle.setAttribute('cx', circ.x);
-    //     circle.setAttribute('cy', circ.y);
-    //     circle.setAttribute('r', r);
-    //     return circle;
-    //   });
+
 
 newCirc.forEach((circ) => {
     const circle = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
