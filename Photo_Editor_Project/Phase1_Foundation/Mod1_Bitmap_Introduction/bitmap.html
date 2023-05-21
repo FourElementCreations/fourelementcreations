@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script src="../photo_header.js"></script>
+    <title>Bitmap Presentation</title>
+<style> 
+   #content{
+      padding: 20px;
+   }
+   code{
+      color: white;
+   }
+   #mario{
+      margin-right: 80px;
+   }
+</style>
+</head>
+<body>
+    <script src="../photo_menu.js"></script>
+    <div id="content">
+
+        <h1>Photo-editor Project: Introduction To Bitmap Images</h1>
+        <p>As part of building a digital photo editor, it is important to understand the thing we will be editing, 
+         more than just a digital photo, the bitmap image.</p>
+        <p> In terms of digital images, there are two basic types: vector and bitmap, aka raster.  While both vector and bitmap
+         can come in different file types, they work in fundamentally different ways.  
+         
+         <p>
+            Vector images are made up of mathematical equations or expressions that describe shapes and lines in the image.
+            These shapes and lines can either be filled with colors or gradients, or given a stroke, 
+            i.e. a visualized line that runs along the path of the mathematically mapped line. One advantage of vector images is 
+            that they are scalable, hence the name of a common vector file type, SVG (Scalable Vector Graphic). Scalable meaning 
+            it doesn't pixelate when enlarged.
+         </p>
+         
+         <p>
+            Bitmap images, on the other hand, map a 
+            grid of squares called pixels, from "picture + element", and are the smallest element of a bitmap image. 
+            Pixels contain specific color values and correspond to pixels on a display device such as a computer 
+            monitor or smartphone screen.  the size and resolution of the image and the screen can affect how the image appears 
+            and whether it looks sharp and clear or pixelated and blurry.
+
+         </p>
+         <p>As technology advances, the tendency over time has been for pixels in viewing devices to get smaller and also 
+            for the number of pixels in bitmap files to increase as computers can process larger amounts of data, resulting in 
+            higher resolution images.</p>
+            <p>Super Mario enlarged, and at the original 16 px height.</p>
+         <img id="mario" src="mario.png" width="100" height="123"><img src="mario.png" width="13" height="16">
+         <p>
+            Originally, pixels were only given a single bit of data. That is a 0 or a 1.
+            They were either on or off, lit or dark.
+            Nowadays each pixel can contain bytes of data,
+            typically 3 bytes (24-bit) or 4 bytes (32-bit).
+         </p>
+         <p>
+            This data, of course, is accessible, and it is by accessing pixel data and manipulating it that 
+            digital photo-editing is possible.
+         </p>
+
+
+         <h2>
+            What Data is Contained in a Bitmap Image?
+         </h2>
+         <p>
+            Each pixel in a bitmap image is represented by a set of color values. 
+            These values can be represented in different ways, depending on the file format of the image. 
+            For example, in a 24-bit bitmap image, each pixel is represented by three values: 
+            one for red, one for green, and one for blue (RGB). 
+            As there are 256 possible values in a byte, these color values are often represented as numbers 
+            between 0 and 255, with 0 being the darkest and 255 being the brightest.  
+            The extra byte of data in 32-bit images (RGBA)
+            is for the alpha channel, giving 256 possible values for a pixel's transparency. 
+         </p>
+         
+
+      <p>In addition to the RGB, or RGBA values, bitmap images also contain information about the size of the image, 
+         the resolution (or number of pixels per inch), and other metadata such as the date
+         the image was created and the software used to create it.</p>
+
+        <h2>What Can We Do with Bitmap Image Data?</h2> 
+        
+        <p>With the data contained in a bitmap image, we can perform a wide variety of image processing tasks. For example, 
+         we can change the color values of individual pixels 
+         to create special effects, or we can blur or sharpen specific areas of the image. 
+         We can also use algorithms to automatically detect and correct problems with the image, 
+         such as noise or distortion.</p>
+         <p>In addition to image processing, bitmap image data can also be used for computer 
+         vision tasks such as object recognition or face detection. By analyzing the color 
+         values and patterns in the pixels, we can train machine learning algorithms to identify 
+         specific objects or features within the image.</p> 
+         <p>
+            Conclusion
+
+            Bitmap images are an important part of digital imaging, and understanding the data they 
+            contain can help us create powerful image processing and computer vision applications. 
+            In the next article, we'll take a brief look at the basic tools of building our editor:
+            the HTML Canvas element and the JavaScript programming language.</p>
+    
+     </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="map.js"></script>
+</body>
+</html>
