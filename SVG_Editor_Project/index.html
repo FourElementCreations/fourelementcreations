@@ -1,74 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.17/paper-full.min.js" 
-    integrity="sha512-NApOOz1j2Dz1PKsIvg1hrXLzDFd62+J0qOPIhm8wueAnk4fQdSclq6XvfzvejDs6zibSoDC+ipl1dC66m+EoSQ==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple SVG Path Editor</title>
-    <style>
-        body{
-            background-color: #222;
-            color: white;
+   <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../editor.css">
+<link rel="stylesheet" href="../logo.css">
+<link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
+<link rel="manifest" href="../../img/site.webmanifest">
+   <title>SVG Editor Project</title>
+  
+  
 
-        }
-        a{
-            color: white;
-            text-decoration: none;
-        }
-        #content{
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
-        #toolbar{
-            position: fixed;
-            background-color: #444;
-            width: 40px;
-            padding: 5px;
-            padding-top: 0px;
-            top: 120px;
-            left: 50px;
-            display: flex;
-            flex-direction: column;
-        }
-        .button{
-            background-color: #222;
-            padding-left: 10px;
-            padding-top: 10px;
-            width: 30px;
-            height: 30px;
-            margin-top:5px;
-        }
-        .active{
-            border: 2px solid blue;
-        }
-        #workspaceContainer{
-            width: 1000px;
-            height: 700px;
-            position: fixed;
-            top: 80px;
-            left: 260px;
-            background-color: #444;
-
-       }
-    </style>
 </head>
 <body>
-    <a href="../index.html">Index</a>
-    <div id="toolbar">
-        <div class="button" id="pen-tool"><img src="pen-tool.svg" width="20px" height="20px"></div>
-        <div class="button" id="select-tool"><img src="select-tool.svg" width="20px" height="20px"></div>
-        <div class="button" id="brush-tool"><img src="brush-tool.svg" width="20px" height="20px"></div>
-        <div id="workspaceContainer">
-            <!-- <svg id="workspace" width="1000" height="700"> -->
-                <!-- SVG paths and other elements will be added here -->
-              <!-- </svg> -->
-        </div>
+   <div id="content">
+      <a href="../index.html">
+         <div id="title-logo"><img src="../img/4EC_logo32.png"><h1 id="title-logo_text">FOUR ELEMENT CREATIONS</h1></div>
+      </a> 
+
     </div>
-    <script type="module" src="KonvaJS.js"></script>
-    <script type="module" src="mainK.js"></script>
+      
+      <div id="wrapper"> 
+         <h2>Tutorials</h2>
+      <div class="wrap">
+      
+        
+         
+      </div>
+      
+      </div>
+   <div id="container">
+      <div id="intro">
+         <h1>A SVG EDITOR PROJECT</h1>
+         <a href="app.html"><h2 id="app-link">GO TO THE APP</h2></a>
+         <h2>The Goal</h2>
+         <P>The goal is to create a Illustrator-like SVG-editing app
+            for the purpose of understanding what's underneath the hood of an image-manipulation machine.</P>
+         <p>Because the goal is understanding, there may be a lot of reinventing the wheel.</p>
+         <p>Rather than try to make the editor all at once, the project has been broken up into smaller
+            projects.  As the photo-editor will be built with JavaScript, each project 
+            is presented as a tutorial to explain the steps in JavaScript.</p>
+         
+      </div>
+      <h2>Projects/Tutorials</h2>
+      <div id="tutorials">
+         
+ 
+      </div>
+  
+   </div>
+   <script type="module">
+      import { tuts } from './tutorials.js';
+   console.log(tuts)
+
+   document.addEventListener("DOMContentLoaded", function() {
+      const addLinksToMenu = () => {
+         const wrap = document.querySelector('.wrap')
+         tuts.forEach(tutorial => {
+            const link = document.createElement("a");
+            link.href = tutorial.url.replace('../', '');
+            link.textContent = tutorial.title;
+            link.classList.add('goal')
+            wrap.appendChild(link);
+         });
+      }
+   
+      const addLinksToTutorials = () => {
+         const tutorials = document.getElementById('tutorials')
+         tuts.forEach(tutorial => {
+            const link = document.createElement("a");
+            link.href = tutorial.url.replace('../', '');
+            const div = document.createElement('div');
+            div.textContent = tutorial.title;
+            div.classList.add('tut');
+            link.appendChild(div);
+            tutorials.appendChild(link);
+         });
+      }
+   
+      addLinksToMenu();
+      addLinksToTutorials();
+});
+
+   </script>
+   
 </body>
 </html>

@@ -36,28 +36,29 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 }
 img.src = url
-var canvas = document.getElementById("canvas");
 
-// Replace this with your canvas drawing logic
-// ...
+// var canvas = document.getElementById("canvas");
 
-// Convert canvas content to data URL
-var dataURL = canvas.toDataURL("image/png"); // For PNG format
+// // Replace this with your canvas drawing logic
+// // ...
 
-// Create a link element for downloading
-var link = document.createElement("a");
-link.href = dataURL;
-link.download = "canvas_image.png"; // Set desired file name and extension
+// // Convert canvas content to data URL
+// var dataURL = canvas.toDataURL("image/png"); // For PNG format
 
-// Simulate a click on the link to trigger the download
-link.click();
+// // Create a link element for downloading
+// var link = document.createElement("a");
+// link.href = dataURL;
+// link.download = "canvas_image.png"; // Set desired file name and extension
+
+// // Simulate a click on the link to trigger the download
+// link.click();
 
 
-var fadeWrapper = document.getElementById("fade-wrapper");
-var logo = document.getElementById("logo");
+// var fadeWrapper = document.getElementById("fade-wrapper");
+// var logo = document.getElementById("logo");
 
-logo.addEventListener("click", function() {
-  fadeWrapper.classList.add("fade-out");
-  logo.classList.add("slide-out");
-});
+// logo.addEventListener("click", function() {
+//   fadeWrapper.classList.add("fade-out");
+//   logo.classList.add("slide-out");
+// });
 
