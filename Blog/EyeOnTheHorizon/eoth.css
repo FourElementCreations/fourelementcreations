@@ -1,5 +1,5 @@
 a {
-    color: #eee;
+    color: #bce1ed;
     font-family: 'Roboto', sans-serif;
 
     text-decoration: none;
@@ -49,6 +49,9 @@ body{
     width: 230px;
     margin-left: auto;
     margin-right: auto;
+}
+.caption{
+    font-size: 12px;
 }
 #content{
     display: flex;
