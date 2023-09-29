@@ -1,0 +1,71 @@
+body{
+    background-color: rgb(37, 37, 37);
+    background-image: url('sunrise_horizon2.svg');
+    background-size: cover;
+    color: white;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    color: #2c2a2a;
+    font-weight: lighter;
+}
+li{
+    margin-bottom: 10px;
+}
+strong{
+    color: rgb(226, 224, 202);
+}
+#canvas-wrapper{
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+}
+iframe{
+    margin: auto;
+}
+#content{
+    display: flex;
+}
+#blog-titles {
+    margin-top: 60px;   
+    width: 400px;
+    
+
+}
+.blog-container{
+    width: 760px;
+    margin: auto;
+}
+.blog-content{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #454442;
+    padding: 20px;
+    font-family: 'Onest', sans-serif;
+    
+}
+.blog-link{
+    height: 30px;
+    width: 400px;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 5px;
+}
+a {
+    color: #eee;
+    font-family: 'Roboto', sans-serif;
+
+    text-decoration: none;
+
+}
+
+#blog-post-container{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
