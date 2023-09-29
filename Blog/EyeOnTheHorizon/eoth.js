@@ -19,3 +19,20 @@ ctx.fill();
 ctx.font = "48px Fuggles";
 ctx.fillStyle = "#224";
 ctx.fillText("Eye on the horizon", 0, 50);
+
+function downloadCanvas() {
+    const dataURL = canvas.toDataURL("image/png");
+  
+    // Create a temporary anchor element to trigger the download
+    const a = document.createElement("a");
+    a.href = dataURL;
+    a.download = "canvas_image.png";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    console.log('function ran.')
+  }
+  
+  // Add a button or trigger element to initiate the download
+  const downloadButton = document.getElementById("downloadButton");
+  downloadButton.addEventListener("click", downloadCanvas);

@@ -75,6 +75,10 @@ iframe{
 li{
     margin-bottom: 10px;
 }
+.logo{
+    width: 300px;
+    margin: auto;
+}
 strong{
     color: rgb(226, 222, 202);
 }
