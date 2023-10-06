@@ -75,10 +75,24 @@ iframe{
 li{
     margin-bottom: 10px;
 }
-.logo{
+.logo {
     width: 300px;
-    margin: auto;
+    height: 32px;
 }
+
+.logo img {
+    vertical-align: middle; /* Align the image vertically */
+}
+
+.logo h1 {
+    color: #2c2a3a;
+    font-family: 'DM Serif Display';
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    display: inline; /* Make the h1 inline */
+}
+
 strong{
     color: rgb(226, 222, 202);
 }
